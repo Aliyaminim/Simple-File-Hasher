@@ -16,7 +16,7 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-add_executable(driver ./src/main.cpp ./src/process.cpp)
+add_executable(driver ./src/main.cpp ./src/process.cpp ./src/hash_file.cpp)
 target_include_directories(driver PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_subdirectory(test)
