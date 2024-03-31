@@ -41,7 +41,7 @@ void generate_binary_file(const std::string& filename, std::size_t size, double 
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
-        std::cerr << "ERROR: Incorrect input\nExpected: <filename> <size_in_elements_of_4bytes> <zero_elements_ratio>\n" << std::endl;
+        std::cerr << "ERROR: Incorrect input\nExpected: <size_in_elements_of_4bytes> <zero_elements_ratio>\n" << std::endl;
         return 1;
     }
     std::size_t file_size = std::stoul(argv[1]);
