@@ -8,7 +8,7 @@ files_dir="e2e_test"
 file_list=($files_dir/*)
 
 i=0;
-j=19;
+j=20;
 
 while [ $i -le $j ] && [ $(($i + $1)) -le $j ]; do
     args=""
