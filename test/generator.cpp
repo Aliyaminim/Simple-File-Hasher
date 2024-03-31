@@ -3,7 +3,7 @@
 #include <random>
 #include <cstdint>
 #include <string>
-#include <exception>
+#include <stdexcept>
 
 std::string generate_filename() {
     std::random_device rd;
