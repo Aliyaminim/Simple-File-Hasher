@@ -19,5 +19,8 @@ endif()
 add_executable(driver ./src/main.cpp ./src/process.cpp ./src/hash_file.cpp)
 target_include_directories(driver PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
+add_executable(driver_multi ./src/main_multi.cpp ./src/process.cpp ./src/hash_file.cpp)
+target_include_directories(driver_multi PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
 add_subdirectory(test)
 #cmake -DCMAKE_BUILD_TYPE=Debug
