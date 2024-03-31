@@ -18,7 +18,7 @@ std::uint32_t hash_file(const std::string& filename) {
     data_processor_t processor;
     std::vector<std::uint32_t> block(BLOCK_SIZE);
 
-    std::size_t bytes_read = 0;
+    long long bytes_read = 0;
     std::uint32_t hash = 0u;
     while ((bytes_read = read(input_fd, block.data(), BLOCK_SIZE * sizeof(std::uint32_t))) > 0) {
         std::size_t elems_read = bytes_read / sizeof(std::uint32_t);
