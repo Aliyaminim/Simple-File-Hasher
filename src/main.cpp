@@ -26,12 +26,12 @@ int main(int argc, char* argv[]) {
     std::vector<std::uint32_t> block(BLOCK_SIZE);
 
     std::size_t bytes_read = 0;
+    std::uint32_t hash = 0u;
     while ((bytes_read = read(input_fd, block.data(), BLOCK_SIZE * sizeof(std::uint32_t))) > 0) {
         std::size_t elems_read = bytes_read / sizeof(std::uint32_t);
         block.resize(elems_read);
 
-        std::uint32_t hash = processor.process_block(block);
-        std::cout << "0x" << std::hex << std::setw(8) << std::setfill('0') << hash << std::endl;
+        hash = processor.process_block(block);
     }
 
     if (bytes_read == -1) {
@@ -40,6 +40,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    std::cout << "0x" << std::hex << std::setw(8) << std::setfill('0') << hash << std::endl;
     close(input_fd);
+
     return 0;
 }
