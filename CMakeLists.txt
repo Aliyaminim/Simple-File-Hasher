@@ -18,4 +18,6 @@ endif()
 
 add_executable(driver ./src/main.cpp ./src/process.cpp)
 target_include_directories(driver PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
+add_subdirectory(test)
 #cmake -DCMAKE_BUILD_TYPE=Debug
